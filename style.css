@@ -1,0 +1,566 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.containerss h2 {
+    color: rgb(89, 89, 221);
+    text-transform: uppercase;
+}
+
+@media(max-width:800px) {
+    .containerss {
+        font-size: 1em;
+    }
+    .home-img{
+        margin-top: 25px;
+    }
+}
+.main-btn{
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+section{
+    padding: 30px 0;
+}
+
+.home-img{
+    opacity: 0;
+    animation: zoomIn 1s ease forwards,floatImage 4s ease-in-out infinite;
+    animation-delay:1s,3s;
+}
+.icons a{
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.hire{
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.tech span{
+    color:rgb(89, 89, 221);
+}
+/* .navbar{
+    position:sticky;
+    top: 0;
+    z-index: 100;
+} */
+.navbar-nav a{
+    display: inline-block;
+    opacity: 0;
+    animation: slideTop .3s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.tech,.techs{
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay:.5s;
+}
+.tech{
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .5s;
+}
+.name{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.logo{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    cursor: default;
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+         100% {
+             transform: translateX(0);
+             opacity: 1;
+         }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform:scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.card p{
+    margin-bottom: 0;
+}
+.card{
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    border:1px solid gold;
+}
+footer{
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+footer .social-icons,.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+footer .social-icons li,.menu li{
+    list-style: none;
+}
+footer .social-icons li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social-icons li a:hover{
+    transform: translateY(-10px);
+}
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu li a:hover{
+    opacity: 1;
+} 
+footer p{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background:url(wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animatewave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animatewave_02 3s linear infinite;
+}
+@keyframes animatewave {
+    0%{
+        background-position: 1000px;
+    }
+    100%{
+        background-position: 0px;
+    }
+}
+@keyframes animatewave_02 {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: 1000px;
+    }
+}
+
+.contact{
+    position: relative;
+    /* min-height: 100vh; */
+    padding: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500; 
+}
+.contact .content p {
+    font-weight: 300;
+}
+.container-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container-form .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container-form .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex; 
+}
+.container-form .contactInfo .box .form-icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    background: gainsboro;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container-form .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container-form .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+}
+.contactform h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactform .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputBox input,.contactform .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactform .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputBox input:focus~span,
+.contactform .inputBox input:valid~span,
+.contactform .inputBox textarea:focus~span,
+.contactform .inputBox textarea:valid~span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputBox input[type="submit"]{
+    width: 100%;
+    background: #00bcd4;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width:991px){
+    .contact{
+        padding: 50px;
+    }
+    .container-form{
+        flex-direction: column;
+    }
+    .container-form .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container-form .contactInfo,.contactform{
+        width: 100%;
+    }
+}
+
+
+
+.skills-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 90%;
+}
+
+.skills-section h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.skills-section p {
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-description {
+    width: 30%;
+    min-width: 250px;
+    text-align: left;
+}
+
+.skill-item {
+    margin-bottom: 30px;
+}
+
+.skill-item i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.skill-item h2 {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.skill-bars {
+    width: 60%;
+    min-width: 300px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-bar span {
+    display: block;
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.progress {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.progress-bar.html5 {
+    width: 40%;
+    background-color: #ff5722;
+}
+
+.progress-bar.css3 {
+    width: 90%;
+    background-color: #03a9f4;
+}
+
+.progress-bar.jquery {
+    width: 50%;
+    background-color: #4caf50;
+}
+
+.progress-bar.php {
+    width: 50%;
+    background-color: #673ab7;
+}
+
+.progress-bar.wordpress {
+    width: 75%;
+    background-color: #795548;
+}
+
+.progress-bar.seo {
+    width: 100%;
+    background-color: #8bc34a;
+}
+
+.progress-bar.photoshop {
+    width: 40%;
+    background-color: #2196f3;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-description,
+    .skill-bars {
+        width: 100%;
+    }
+
+    .skill-item {
+        text-align: center;
+    }
+
+    .skill-item i {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .skill-item h2 {
+        display: block;
+    }
+}
+
+
+.top-link {
+    font-size: 1.1rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background:#000509;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: grid;
+    place-items: center;
+    border-radius:50%;
+    color:white;
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

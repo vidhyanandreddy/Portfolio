@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-touch-action: manipulation;
+touch-action: pan-y;
 }
 .containerss h2 {
     color: rgb(89, 89, 221);

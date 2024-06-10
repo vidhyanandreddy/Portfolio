@@ -18,8 +18,3 @@ var typed = new Typed('.auto-type',{
     backSpeed : 150,
     looped : true,
 });
-    document.addEventListener('touchmove', function(event) {
-            if (event.scale !== 1) {
-                event.preventDefault();
-            }
-        }, { passive: false });

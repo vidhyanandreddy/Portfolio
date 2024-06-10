@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+touch-action:pan-y;
+}
 .containerss h2 {
     color: rgb(89, 89, 221);
     text-transform: uppercase;
